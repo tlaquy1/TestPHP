@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="css/sb-admin.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark">
+<body style="background-color: darkcyan;">
     <div class="container">
         <div class="card card-login mx-auto mt-5">
             <div class="card-header">Login</div>
