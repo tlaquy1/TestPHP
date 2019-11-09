@@ -184,5 +184,34 @@
             $link->close();
             return $count;
         }
+        //INSERT INTO `nhan` (`MaNhan`, `TenNhan`) VALUES ('nhan4', 'FPT');
+        static function addNhanToDB($maNhan=null,$tenNhan=null)
+        {
+            $link = connect();
+           // $sql="INSERT INTO `thongtin`( `Name`, `Phone`, `Email`) VALUES ('$content[0]','$content[1]','$content[2]')";
+            $sql="INSERT INTO `nhan` (`MaNhan`, `TenNhan`) VALUES ('$maNhan', '$tenNhan')";
+        // $result =  $con->query($sql);
+            //mysqli_query($link, $sql);
+            if (mysqli_query($link, $sql)) {
+                echo "New record created successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($link);
+            }
+            //b3 : đóng kết nối
+            $link->close();
+        }
+        //INSERT INTO `tag` (`ID`, `MaNhan`) VALUES ('5', 'nhan3');
+        static function addTagContact($id=null,$maNhan=null)
+        {
+            $link = connect();
+            $sql="INSERT INTO `tag` (`ID`, `MaNhan`) VALUES ('$id', '$maNhan')";
+                if (mysqli_query($link, $sql)) {
+                echo "New record created successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($link);
+            }
+    
+            $link->close();
+        }
     }
 ?>

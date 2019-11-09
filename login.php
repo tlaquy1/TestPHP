@@ -41,13 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form method="post">
                     <div class="form-group">
                         <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required="required" autofocus="autofocus">
+                            <input type="email" id="inputEmail" class="form-control" name="email" placeholder="nguyendung622@gmail.com" required="required" autofocus="autofocus">
                             <label for="inputEmail">Email address</label>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-label-group">
-                            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="required">
+                            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="123" required="required">
                             <label for="inputPassword">Password</label>
                         </div>
                     </div>

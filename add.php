@@ -10,8 +10,17 @@
     $ten=$_REQUEST["ten"];
     $sdt=$_REQUEST["sdt"];
     $email=$_REQUEST["email"];
-    echo $ten." ".$sdt." ".$email;
+    $nhan=$_REQUEST["chooseNhan"];
+    //echo $ten." ".$sdt." ".$email." ".$nhan;
     ThongTin::addToDB($id,$ten,$email,$sdt);
+    tag::addTagContact($id,$nhan);
     }
+    if(isset($_REQUEST["maNhan"])){
+        $maNhan=$_REQUEST["maNhan"];
+        $tenNhan=$_REQUEST["tenNhan"];
+       
+        //echo $ten." ".$sdt." ".$email;
+        tag::addNhanToDB($maNhan,$tenNhan);
+        }
     header("location:index.php");
 ?>

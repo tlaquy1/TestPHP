@@ -25,9 +25,7 @@
         a:hover{
             color:blueviolet;
         }
-        a:active{
-            color: red;
-        }
+        
         
     </style>
 </head>
